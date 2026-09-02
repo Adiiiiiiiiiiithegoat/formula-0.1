@@ -1,0 +1,9 @@
+# The background music track is not published with this repo - its provenance
+# could not be verified. See assets/audio/README.md.
+assets/audio/*.mp3
+
+# scratch / probe files
+_*.mjs
+_*.html
+node_modules/
+package.json

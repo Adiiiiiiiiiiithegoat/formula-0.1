@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Formula 0.1</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="view"></canvas>
+
+<!-- in-session HUD -->
+<div id="hud" hidden>
+  <button id="hud-pause" class="hud-btn" title="Pause (Esc)">
+    <span></span><span></span>
+  </button>
+
+  <canvas id="minimap" width="168" height="168"></canvas>
+
+  <div id="hud-top">
+    <div id="hud-position" class="hud-panel" hidden>
+      <div class="hp-pos"><b id="pos-val">1</b><i id="pos-total">/21</i></div>
+      <div class="hp-gap"><span>GAP</span><b id="gap-val">--</b></div>
+    </div>
+  </div>
+
+  <div id="hud-banner"></div>
+
+  <div id="hud-lap" class="hud-panel"><span>LAP</span><b id="lap-val">1/5</b></div>
+
+  <div id="hud-timing" class="hud-panel">
+    <div class="row"><span>RECORD</span><b id="t-record">--:--.---</b></div>
+    <div class="row big"><span>CURRENT</span><b id="t-current">--:--.---</b></div>
+    <div class="row"><span>DIFFERENCE</span><b id="t-delta">--.---</b></div>
+  </div>
+
+  <div id="hud-speed" class="hud-panel"><b id="spd-val">0</b><span>km/h</span></div>
+
+  <button id="skip-btn" class="btn primary skip" hidden>Skip to Qualifying &rsaquo;</button>
+  <div id="line-key" hidden>
+    <span><i style="background:#2ad95c"></i>accelerate</span>
+    <span><i style="background:#fac81a"></i>hold</span>
+    <span><i style="background:#f0332a"></i>brake</span>
+  </div>
+</div>
+
+<!-- menus / results -->
+<div id="overlay"></div>
+
+<!-- pause -->
+<div id="pause" hidden>
+  <div class="panel narrow">
+    <h2>Paused</h2>
+    <button class="btn primary" data-act="resume">Resume</button>
+    <button class="btn" data-act="restart">Restart</button>
+    <button class="btn ghost" data-act="quit">Quit to Menu</button>
+  </div>
+</div>
+
+<div id="loading" hidden><div class="spin"></div><p>Building circuit…</p></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
